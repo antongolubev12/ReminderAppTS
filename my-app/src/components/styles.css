@@ -1,29 +1,29 @@
-.input{
+.input {
     display: flex;
     width: 90%;
     position: relative;
     align-items: center;
 }
 
-.input__box{
+.input__box {
     width: 100%;
     border-radius: 50px;
     padding: 20px 30px;
-    font-size:25px;
+    font-size: 25px;
     border: none;
     transition: 0.2s;
-    box-shadow:inset 0 0 5px black;
+    box-shadow: inset 0 0 5px black;
 }
 
 /* adds a shadow when the input box is clicked */
 .input__box:focus {
-    box-shadow: 0 0 10px 1000px rgba(0 , 0, 0 , 0.5);
+    box-shadow: 0 0 10px 1000px rgba(0, 0, 0, 0.5);
     outline: none;
 }
 
-.input__submit{
+.input__submit {
     position: absolute;
-    width:50px;
+    width: 50px;
     height: 50px;
     margin: 12px;
     border-radius: 50px;
@@ -31,19 +31,70 @@
     border: none;
     font-size: 15px;
     background-color: #2f74c0;
-    color:white;
-    transition:  0.2s all;
+    color: white;
+    transition: 0.2s all;
     box-shadow: 0 0 10px black;
 
 }
 
 /* When button is hovered the color changes */
-.input__submit:hover{
+.input__submit:hover {
     background-color: #3791f2;
 }
 
-.input__submit:active{
+.input__submit:active {
     transform: scale(0.7);
     box-sizing: 0 0 5px black;
+}
+
+.todos {
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+    flex-wrap: wrap;
+}
+
+.todos__single {
+    display: flex;
+    width: 29.5%;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 15px;
+    background-image: url("https://img.freepik.com/free-vector/white-gold-geometric-pattern-background-vector_53876-140726.jpg?w=2000");
+}
+
+.todos__single__text {
+    flex: 1;
+    padding: 5px;
+    border: none;
+    font-size: 20px;
+}
+
+.icons {
+    margin-left: 10px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.todos__single__text:focus{
+    outline: none;
+}
+
+@media(max-width: 1200px){
+    .todos__single{
+        width: 40%;
+    }
+}
+
+@media(max-width:700px) {
+    .input {
+        width: 95%;
+    }
+    .todos {
+        width: 95%;
+    }
+    .todos__single {
+        width: 100%;
+    }
 }
 
